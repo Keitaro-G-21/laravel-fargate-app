@@ -15,8 +15,8 @@ jobs:
   runs-on: ubuntu-latest
 
   step:
-   -name: Configure aws credentials for prod
-    #if:github.ref == 'refs/heads/main'
+   - name: Configure aws credentials for prod
+    # if: github.ref == 'refs/heads/main'
     uses: aws-actions/configure-aws-credentials@vl
     with:
      aws-access-key-id: ${{secrets.PROD_AWS_ACCESS_KEY_ID}}
